@@ -38,8 +38,54 @@ public class Matriz3x3 {
     
     public static void main(String[] args) {
         Matriz3x3 m = new Matriz3x3();
-        m.set();
-        m.get();
-        
-    }   
+        Matriz3x3 n = new Matriz3x3();
+
+    System.out.println("Ingrese la primera matriz:");
+    m.set();
+
+    System.out.println("Ingrese la segunda matriz:");
+    n.set();
+
+    Matriz3x3 resultado = m.sumar(n);
+    Matriz3x3 resultadoM = m.multiplicar(n);
+    System.out.println("\nPrimera matriz:");
+    m.get();
+
+    System.out.println("\nSegunda matriz:");
+    n.get();
+
+    System.out.println("\nSuma de matrices:");
+    resultado.get();
+    
+    System.out.println("\nMultiplicacion de matrices:");
+    resultadoM.get();
 }
+     public Matriz3x3 sumar(Matriz3x3 otra) {
+
+     Matriz3x3 resultado = new Matriz3x3();
+     for (int i = 0; i < filas; i++) {
+     for (int j = 0; j < columnas; j++) {
+     resultado.data[i][j] =
+
+    this.data[i][j] + otra.data[i][j];
+}
+}
+return resultado;
+ }
+    public Matriz3x3 multiplicar(Matriz3x3 otra) {
+
+    Matriz3x3 resultadoM = new Matriz3x3();
+
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            resultadoM.data[i][j] = 0;
+
+            for (int k = 0; k < columnas; k++) {
+                resultadoM.data[i][j] += this.data[i][k] * otra.data[k][j];
+            }
+        }
+    }
+
+    return resultadoM;
+} 
+ }

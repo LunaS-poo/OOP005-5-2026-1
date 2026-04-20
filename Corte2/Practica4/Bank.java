@@ -18,9 +18,10 @@ public class Bank{
 
   public static void main(String[] args){
     Bank bankOfGods = new Bank();
+    System.out.println(bankOfGods.accountSix.getName());
     System.out.println(bankOfGods.accountSix.getBalance());
-    bankOfGods.accountSix.setBalance(5000);
-    System.out.println(bankOfGods.accountSix.getBalance());
+    System.out.println(bankOfGods.accountSix.getId());
+    System.out.println(bankOfGods.accountSix.getInterestRate());
     System.out.println(bankOfGods.accountSix.getMonthlyInterest());
 
   }

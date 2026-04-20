@@ -11,6 +11,30 @@ public class CheckingAccount{
     this.interestRate = 0.02;
   }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public double getInterestRate() {
+        return interestRate;
+    }
+
+    public void setInterestRate(double interestRate) {
+        this.interestRate = interestRate;
+    }
+
   public int getBalance(){
     return this.balance;
   }
@@ -23,3 +47,5 @@ public class CheckingAccount{
     return this.interestRate * this.balance;
   }
 }
+
+ 
